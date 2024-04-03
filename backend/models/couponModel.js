@@ -6,18 +6,17 @@ var couponSchema = new mongoose.Schema({
         type:String,
         required:true,
         unique:true,
-        index:true,
     },
     maxdiscount:{
         type:Number,
         required:true,
-        unique:true,
     },
+
     categories:{
         type:Array ,
         default : [],
+        "unique":"true",
         required:true,
-        unique:true,
     },
     minprice:{
         type:Number,

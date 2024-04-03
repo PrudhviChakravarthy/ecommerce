@@ -20,7 +20,7 @@ database()
 app.use("",homepageRouter)
 app.use("/api/user",authRouter)
 app.use("/api/products",productRouter)
-app.use("/api/coupn",couponRouter)
+app.use("/api/coupon",couponRouter)
 
 // Using the 404 error for not found page.
 app.use(notFound)
