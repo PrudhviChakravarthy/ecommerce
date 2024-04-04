@@ -6,7 +6,8 @@ const TokenCheck = async (req, res, next) => {
     if (! Auth){
         // res.json({"message":"Token not avilable"})
         req.logedin = false
-        next()
+        res.status(403).send("no token provided")
+        // next()
 
     } else if (Auth.startsWith("Bearer")){
         token = Auth.split(" ")[1];

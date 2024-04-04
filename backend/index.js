@@ -8,6 +8,7 @@ const authRouter = require("./routes/authRoutes")
 const productRouter = require("./routes/productRoutes")
 const homepageRouter  = require("./routes/homepageRoutes")
 const couponRouter = require("./routes/couponRoutes")
+const commentRouter = require("./routes/commentsRoutes")
 const {notFound, errorHandler}  = require("./middlewares/errorHandaling")
 
 const PORT = process.env.PORT || 4200;
@@ -21,6 +22,7 @@ app.use("",homepageRouter)
 app.use("/api/user",authRouter)
 app.use("/api/products",productRouter)
 app.use("/api/coupon",couponRouter)
+app.use("/api/comments",commentRouter)
 
 // Using the 404 error for not found page.
 app.use(notFound)
