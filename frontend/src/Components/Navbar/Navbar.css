@@ -30,10 +30,19 @@
     text-transform: uppercase;
 }
 
+/* navbar selection */
+
 .navbarselection {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
+    height: 50px;
+}
+.navbarselection ul {
+    font-weight: 400;
+    margin: 0;
+    gap:3px;
+    padding-bottom: 0;
 }
 
 /* navbar userproducts  */
