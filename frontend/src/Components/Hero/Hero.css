@@ -1,0 +1,49 @@
+.Hero{
+    display: flex;
+    justify-content: space-around;
+    height: 90vh;
+    background: linear-gradient(180deg,#fde1ff,#e1ffe1 60%);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    gap: 20px;
+    text-align: left;
+    padding-left: 100px;
+    line-height: 1.1;
+}
+
+.hero-right h2{
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.hero-right p {
+    font-size: 40px;
+    font-weight: 650;
+}
+
+.getpetbtn {
+    background-color: rgb(255, 79, 79);
+    border-radius: 20px;
+    box-shadow: none;
+    width: 300px;
+    border: none;
+    height: 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.getpetbtn:hover{
+    background-color: #ff683a;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.hero-left{
+    flex:2;
+}

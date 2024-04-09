@@ -1,5 +1,12 @@
-
+*{
+  margin: 0;
+}
 
 .App {
   text-align: center;
+}
+
+.linkingclass{
+  text-decoration: none;
+  color: black;
 }
