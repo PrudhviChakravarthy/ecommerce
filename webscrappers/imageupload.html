@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Image Upload</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload Image</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('uploadForm');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            formData.append("productid","1234")
+            console.log(formData)
+            try {
+                const response = await fetch('http://localhost:4000/api/image/upload', {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'cors', 
+                });
+                if (!response.status(200)) {
+                    throw new Error('Failed to upload image');
+                }
+                const data = await response.json();
+                alert('Image uploaded successfully! Filename: ' + data.filename);
+            } catch (error) {
+                console.error('Error uploading image:', error);
+                alert('Error uploading image');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -21,7 +21,7 @@ export default function Navbar() {
             <ul onClick={()=>setselection("aboutus")}><Link to={"/aboutus"}>ABOUT US</Link>{selection === 'aboutus' ? <hr></hr>:<></>}</ul>
         </div>
         <div className='userproducts'>
-            <Link to={"/cart"}><i className="fa-solid fa-cart-shopping addtocart"></i></Link>
+            <Link to={"/cart"}><i className="fa-solid fa-cart-shopping cart"></i></Link>
             <Link to= {"/wishlist"}><i class="fa-solid fa-heart"></i></Link>
         </div>
         <div>

@@ -1,0 +1,54 @@
+.addtocart{
+    background: linear-gradient(to left,#eca740 ,#a32b2b) !important; 
+    background-color: #ff7300 !important;
+    color: #000;
+}
+.addtowishlist{
+    transform: scale(1.5);
+    height: 30px;
+    width: 30px;
+}
+.addtowishlist:hover{
+    transform: scale(1.7);
+}
+
+.productscontainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 78vw;
+}
+
+
+.petsdata {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: azure;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    -webkit-box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.imgcontainer{
+    width: 200px;
+}
+
+.petfullname{
+    white-space: none;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+}
+
+.petdatacontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}

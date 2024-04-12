@@ -19,9 +19,13 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage})
 
 
-const getImages = async(req,res) =>{
-    const productid = req.body.productid
-    
+const getImage = async(req,res) =>{
+    const imagename = req.params.imagename
+    if(imagename){
+            res.sendFile(`C:/Users/pc/Downloads/ecommerce/ecommerce/backend/public/images/${imagename}`)
+        }else{
+            res.status(404).send("image not found")
+        }
 }
 
 const deleteImage = async(req,res) => {
@@ -44,13 +48,14 @@ const uploadImage = async(req,res) => {
     }
 }
 
-const getImage = async(req,res) => {
-    const imageid = req.body.imageid
-}
+// const getImage = async(req,res) => {
+//     const imageid = req.body.imageid
+// }
 
 
 module.exports = {
     upload,
-    uploadImage
+    uploadImage,
+    getImage
 }
 

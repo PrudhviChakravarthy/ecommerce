@@ -2,6 +2,7 @@ import './App.css';
 // import Hero from './Components/Hero/Hero';
 import Navbar from './Components/Navbar/Navbar';
 import Categories from './Pages/Categories';
+import Search from './Pages/Search';
 
 import Home from './Pages/Home';
 import {
@@ -21,6 +22,7 @@ function App() {
               <Route path='/aboutus' element={<Home/>}/>
               <Route path='/categories' element={<Categories/>}/>
               <Route path='/contactus' element={<Home/>}/>
+              <Route path='/search/:query' element={<Search/>}/>
               <Route path='/product' element={<Home/>}/>
               <Route path='/cart' element={<Home/>}/>
               <Route path='/wishlist' element={<Home/>}/>

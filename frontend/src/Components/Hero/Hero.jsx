@@ -1,13 +1,9 @@
 import React from 'react';
-import Typingtest from './typing_text';
 import dogheroimg from '../../static/images/doghero.png'
 import './Hero.css'
+import { Link } from 'react-router-dom';
 
-const carouselText = [
-  { text: "Apple", color: "red" },
-  { text: "Orange", color: "orange" },
-  { text: "Lemon", color: "yellow" }
-];
+
 
 const Hero = () => {
   return (
@@ -19,7 +15,7 @@ const Hero = () => {
                 <p>We have every adorable</p>
                 <p>pet you can care for!</p>
             </div>
-            <button className="getpetbtn">Get your pet now </button>
+            <Link to={"/search"}><button className="getpetbtn">Get your pet now </button></Link>
         </div>
         <div className="hero-left">
             <img style={{maxHeight:'500px'}} src={dogheroimg} alt="" />

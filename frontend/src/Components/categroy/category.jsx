@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import "./category.css"
 import {Link}  from "react-router-dom"
+import Search from '../../Pages/Search'
 
 
 export default function Category(props) {
@@ -28,7 +29,7 @@ export default function Category(props) {
             <div className="petpricerange">
                 <h2>Price-range : 1000 - 5000</h2>
             </div>
-            <Link to={"/pets/"+props.name} className='linkingclass' ><button className="showpets" >Show {props.name}s</button></Link>
+            <Link to={"/search/"+props.name} className='linkingclass' ><button className="showpets categorybtn" >Show {props.name}s</button></Link>
         </div>
     </div>
   )
